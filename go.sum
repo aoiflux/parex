@@ -1,2 +1,4 @@
 github.com/aoiflux/libxfat v0.0.0-20230211103444-3d354e933390 h1:Uxg7oqaJdw8LFIbsyKif1OsinQolNgubTb+RMr0/gpE=
 github.com/aoiflux/libxfat v0.0.0-20230211103444-3d354e933390/go.mod h1:6GtbLho0Vnz144VgQJYG4qcpL00C6ycpKE2FPVtI8j4=
+github.com/aoiflux/libxfat v0.0.0-20230211105635-0db6556cbe39 h1:Dc03UDjcAMMt0Sefy/kCzex1FzZdbh0cS64hexprUQs=
+github.com/aoiflux/libxfat v0.0.0-20230211105635-0db6556cbe39/go.mod h1:6GtbLho0Vnz144VgQJYG4qcpL00C6ycpKE2FPVtI8j4=
