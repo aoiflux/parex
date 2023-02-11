@@ -1,45 +1,27 @@
 package lib
 
 import (
-	"fmt"
 	"os"
 	"path/filepath"
 
-	"github.com/gaurav-gogia/libexfat"
+	"github.com/aoiflux/libxfat"
 )
 
 const datadir = "./data"
 
-func extractentries(exfatdata libexfat.ExFAT, entries []libexfat.Entry) error {
-	if _, err := os.Stat(datadir); err != nil {
-		if os.IsNotExist(err) {
-			err = os.Mkdir(datadir, os.ModeDir)
-			if err != nil {
-				return err
-			}
-		} else {
-			return err
-		}
-	}
-
-	for _, entry := range entries {
-		err := extractentry(exfatdata, entry)
+func extractentries(exfatdata libxfat.ExFAT, rootentries []libxfat.Entry) error {
+	_, err := os.Stat(datadir)
+	if os.IsNotExist(err) {
+		err = os.Mkdir(datadir, os.ModeDir)
 		if err != nil {
 			return err
 		}
 	}
-	return nil
-}
 
-func extractentry(exfatdata libexfat.ExFAT, entry libexfat.Entry) error {
-	if entry.IsDir() || entry.IsDeleted() || entry.IsInvalid() {
-		return nil
-	}
-	path := filepath.Join(datadir, entry.GetName())
-	err := exfatdata.ExtractFileContent(entry, path)
+	abspath, err := filepath.Abs(datadir)
 	if err != nil {
 		return err
 	}
-	fmt.Println("Extracted: ", entry.GetName())
-	return nil
+
+	return exfatdata.ExtractAllFiles(rootentries, abspath)
 }

@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/gaurav-gogia/libexfat"
+	"github.com/aoiflux/libxfat"
 )
 
 func Explore(imagefile *os.File, offset uint64, level int) error {
-	exfatdata, err := libexfat.New(imagefile, true, offset)
+	exfatdata, err := libxfat.New(imagefile, true, offset)
 	if err != nil {
 		return err
 	}
@@ -26,25 +26,24 @@ func Explore(imagefile *os.File, offset uint64, level int) error {
 	return nil
 }
 
-func recursivefls(exfatdata libexfat.ExFAT, rootentries []libexfat.Entry, level int) error {
+func recursivefls(exfatdata libxfat.ExFAT, rootentries []libxfat.Entry, level int) error {
 	if level < 2 {
-		return exfatdata.ShowAllFilesInfo(rootentries, "/", false)
-	}
-
-	entries, err := exfatdata.GetFiles(rootentries)
-	if err != nil {
-		return err
+		return exfatdata.ShowAllEntriesInfo(rootentries, "/", false)
 	}
 
 	if level < 3 {
+		entries, err := exfatdata.GetFiles(rootentries)
+		if err != nil {
+			return err
+		}
 		printentries(entries)
 		return nil
 	}
 
-	return extractentries(exfatdata, entries)
+	return extractentries(exfatdata, rootentries)
 }
 
-func printentries(entries []libexfat.Entry) {
+func printentries(entries []libxfat.Entry) {
 	for index, entry := range entries {
 		fmt.Println(index+1, "-->", entry.GetName())
 	}
