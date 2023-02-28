@@ -32,7 +32,7 @@ func recursivefls(exfatdata libxfat.ExFAT, rootentries []libxfat.Entry, level in
 	}
 
 	if level < 3 {
-		entries, err := exfatdata.GetFiles(rootentries)
+		entries, err := exfatdata.GetAllEntries(rootentries)
 		if err != nil {
 			return err
 		}

@@ -1,4 +1,4 @@
-github.com/aoiflux/libxfat v0.0.0-20230211103444-3d354e933390 h1:Uxg7oqaJdw8LFIbsyKif1OsinQolNgubTb+RMr0/gpE=
-github.com/aoiflux/libxfat v0.0.0-20230211103444-3d354e933390/go.mod h1:6GtbLho0Vnz144VgQJYG4qcpL00C6ycpKE2FPVtI8j4=
-github.com/aoiflux/libxfat v0.0.0-20230211105635-0db6556cbe39 h1:Dc03UDjcAMMt0Sefy/kCzex1FzZdbh0cS64hexprUQs=
-github.com/aoiflux/libxfat v0.0.0-20230211105635-0db6556cbe39/go.mod h1:6GtbLho0Vnz144VgQJYG4qcpL00C6ycpKE2FPVtI8j4=
+github.com/aoiflux/libxfat v0.0.0-20230228120140-8b40e8ad1e4d h1:9fVO7ZH3NB8LqCCKMxM0Z2u/fSB5kOAGAfCxdkpqZ9I=
+github.com/aoiflux/libxfat v0.0.0-20230228120140-8b40e8ad1e4d/go.mod h1:6GtbLho0Vnz144VgQJYG4qcpL00C6ycpKE2FPVtI8j4=
+github.com/aoiflux/libxfat v0.0.0-20230228122432-d5f29d31de5d h1:LEG7KkmcXGAH/O8E/utXd1vGHK1HzThYQrTKrBQUziQ=
+github.com/aoiflux/libxfat v0.0.0-20230228122432-d5f29d31de5d/go.mod h1:6GtbLho0Vnz144VgQJYG4qcpL00C6ycpKE2FPVtI8j4=

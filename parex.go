@@ -10,9 +10,10 @@ import (
 func main() {
 	if len(os.Args) < 4 {
 		fmt.Println("Use: parex <filepath> <offset> <level>")
-		fmt.Println("Level 0-: FLS")
-		fmt.Println("Level 1: Recursive FLS")
-		fmt.Println("Level 2+: Recursive FCAT")
+		fmt.Println("Level 0-: List Root Entries")
+		fmt.Println("Level 1: List All Entries")
+		fmt.Println("Level 2: List & Count All Entries")
+		fmt.Println("Level 3+: Extract All Files")
 	}
 
 	imagefile, err := os.Open(os.Args[1])
