@@ -31,16 +31,21 @@ func recursivefls(exfatdata libxfat.ExFAT, rootentries []libxfat.Entry, level in
 		return exfatdata.ShowAllEntriesInfo(rootentries, "/", false, true)
 	}
 
-	if level < 3 {
+	if level < 4 {
 		entries, err := exfatdata.GetAllEntries(rootentries)
 		if err != nil {
 			return err
 		}
-		printentries(entries)
-		return nil
+
+		if level == 2 {
+			printentries(entries)
+			return nil
+		}
+
+		return collectedExtract(exfatdata, entries)
 	}
 
-	return extractentries(exfatdata, rootentries)
+	return recursiveExtract(exfatdata, rootentries)
 }
 
 func printentries(entries []libxfat.Entry) {
