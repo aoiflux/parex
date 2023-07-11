@@ -28,7 +28,7 @@ func Explore(imagefile *os.File, offset uint64, level int) error {
 
 func recursivefls(exfatdata libxfat.ExFAT, rootentries []libxfat.Entry, level int) error {
 	if level < 2 {
-		return exfatdata.ShowAllEntriesInfo(rootentries, "/", false, true)
+		return exfatdata.ShowAllEntriesInfo(rootentries, "/", true, false)
 	}
 
 	if level < 4 {
