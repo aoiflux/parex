@@ -14,6 +14,7 @@ func main() {
 		fmt.Println("Level 1: List All Entries")
 		fmt.Println("Level 2: List & Count All Entries")
 		fmt.Println("Level 3+: Extract All Files")
+		return
 	}
 
 	imagefile, err := os.Open(os.Args[1])
