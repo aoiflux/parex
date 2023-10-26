@@ -12,3 +12,8 @@ exFAT file system parsing tool
 5. Extract zip file to get the test file disk image
 6. In the root folder of the code run `go build`
 7. Run the binary and it'll give you some CLI options
+
+### Alternate options
+
+You can also run pre-compiled binary `parex` if you don't wish to install Go
+programming language and compile the code
