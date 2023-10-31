@@ -1,6 +1,6 @@
 # parex
-
 exFAT file system parsing tool
+To checkout published code with a test dataset, checkout this [CodeOcean link](https://codeocean.com/capsule/f899126c-a9ca-4ee9-ae22-be363c350aa6/)
 
 ## how to run
 
